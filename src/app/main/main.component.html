@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="form">
+        <div class="header-block">
+            <h2>Co byste chtěli zdělit našim učitelum?</h2>
+        </div>
+
+        <div class="input-block">
+            <textarea 
+                type="text" 
+                id="input"
+                (input)="autoResize($event)"
+                rows="1"
+                maxlength="200"
+                placeholder="Napište zde svůj text..."
+                [formControl]="feedbackControl"
+            ></textarea>
+        </div>
+      
+        <div class="send-block">
+            <button class="send" (click)="sendFeedback()">Odeslat</button>
+        </div>
+    </div>
+</div>
